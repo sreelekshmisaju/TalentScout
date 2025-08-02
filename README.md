@@ -46,6 +46,8 @@ cd talent-scout-chatbot
 ```bash
 python -m venv venv
 source venv/Scripts/activate
+source venv/Scripts/activate
+
 source venv/bin/activate   # On Windows: venv\Scripts\activate
 ```
 
