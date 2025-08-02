@@ -1,0 +1,232 @@
+[
+    {
+        "id": "00fd9aba223d2777b1ee737d9cafa778efd210f25bdd77f59f46d5bd0abd6271",
+        "timestamp": "2025-08-02T15:13:01.821475",
+        "experience": "0",
+        "position": "ml engineer",
+        "location": "kollam",
+        "tech_stack": "python",
+        "responses": [
+            {
+                "role": "user",
+                "message": "s"
+            },
+            {
+                "role": "user",
+                "message": "s@gmail.com"
+            },
+            {
+                "role": "user",
+                "message": "7812167811"
+            },
+            {
+                "role": "user",
+                "message": "0"
+            },
+            {
+                "role": "user",
+                "message": "ml engineer"
+            },
+            {
+                "role": "user",
+                "message": "kollam"
+            },
+            {
+                "role": "user",
+                "message": "python"
+            },
+            {
+                "role": "user",
+                "message": "skip"
+            },
+            {
+                "role": "user",
+                "message": "yes"
+            },
+            {
+                "role": "user",
+                "message": "skip"
+            },
+            {
+                "role": "user",
+                "message": "yes"
+            },
+            {
+                "role": "user",
+                "message": "skip"
+            },
+            {
+                "role": "user",
+                "message": "yes"
+            },
+            {
+                "role": "user",
+                "message": "skip"
+            },
+            {
+                "role": "user",
+                "message": "yes"
+            },
+            {
+                "role": "user",
+                "message": "skip"
+            },
+            {
+                "role": "user",
+                "message": "yes"
+            }
+        ]
+    },
+    {
+        "id": "00fd9aba223d2777b1ee737d9cafa778efd210f25bdd77f59f46d5bd0abd6271",
+        "timestamp": "2025-08-02T16:00:23.261866",
+        "experience": "3",
+        "position": "ai engineer",
+        "location": "kollam",
+        "tech_stack": "python",
+        "responses": [
+            {
+                "role": "user",
+                "message": "s"
+            },
+            {
+                "role": "user",
+                "message": "s@gmail.com"
+            },
+            {
+                "role": "user",
+                "message": "8912167811"
+            },
+            {
+                "role": "user",
+                "message": "3"
+            },
+            {
+                "role": "user",
+                "message": "ai engineer"
+            },
+            {
+                "role": "user",
+                "message": "kollam"
+            },
+            {
+                "role": "user",
+                "message": "python"
+            },
+            {
+                "role": "user",
+                "message": "skip"
+            },
+            {
+                "role": "user",
+                "message": "skip"
+            },
+            {
+                "role": "user",
+                "message": "yes"
+            },
+            {
+                "role": "user",
+                "message": "skip"
+            },
+            {
+                "role": "user",
+                "message": "yes"
+            },
+            {
+                "role": "user",
+                "message": "skip"
+            },
+            {
+                "role": "user",
+                "message": "yes"
+            },
+            {
+                "role": "user",
+                "message": "skip"
+            },
+            {
+                "role": "user",
+                "message": "yes"
+            },
+            {
+                "role": "user",
+                "message": "skip"
+            },
+            {
+                "role": "user",
+                "message": "yes"
+            }
+        ]
+    },
+    {
+        "id": "5c6551e24bfb8c3a542db4e4d1bf4906288b558766e29233cf18ea022499060d",
+        "timestamp": "2025-08-02T16:27:51.071172",
+        "experience": "0",
+        "position": "ML Engineer",
+        "location": "Kottayam",
+        "tech_stack": "ML, Python, Ai",
+        "responses": [
+            {
+                "role": "user",
+                "message": "Rahul"
+            },
+            {
+                "role": "user",
+                "message": "rahul@gmail.com"
+            },
+            {
+                "role": "user",
+                "message": "8912180911"
+            },
+            {
+                "role": "user",
+                "message": "0"
+            },
+            {
+                "role": "user",
+                "message": "ML Engineer"
+            },
+            {
+                "role": "user",
+                "message": "Kottayam"
+            },
+            {
+                "role": "user",
+                "message": "ML, Python, Ai"
+            },
+            {
+                "role": "user",
+                "message": "choosing svm when dataset is small, clean and has clear margin separation between classes, especially in high dimensional space "
+            },
+            {
+                "role": "user",
+                "message": "skip"
+            },
+            {
+                "role": "user",
+                "message": "yes"
+            },
+            {
+                "role": "user",
+                "message": "L1 regularization adds absolute value of coefficients, leading to sparse models by setting some coefficients to zero . L2 regularization adds squared values, shrinking coefficients but keeping all features "
+            },
+            {
+                "role": "user",
+                "message": "skip"
+            },
+            {
+                "role": "user",
+                "message": "yes"
+            },
+            {
+                "role": "user",
+                "message": "skip"
+            },
+            {
+                "role": "user",
+                "message": "yes"
+            }
+        ]
+    }
+]

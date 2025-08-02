@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+
+# Virtual environment
+env/
+venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+
+# VSCode
+.vscode/
+
+# Mac OS
+.DS_Store
+
+# Streamlit config
+.streamlit/
+
+# Node modules (if used)
+node_modules/
+
+# Build folders
+build/
+dist/
