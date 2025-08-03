@@ -1,4 +1,13 @@
 import streamlit as st
+
+# ----------------- Page Config (MUST BE FIRST) -----------------
+st.set_page_config(
+    page_title="TalentScout - Intelligent Hiring Assistant", 
+    layout="centered",
+    page_icon="💬"
+)
+
+# Now continue with the rest of your imports
 import time
 import random
 from utils import get_technical_questions
@@ -6,11 +15,12 @@ from prompt import build_candidate_prompt
 from data_handler import store_candidate_data
 from utils import is_unexpected_input, get_fallback_response
 
+# ----------------- UI Setup -----------------
 
 # ----------------- Custom CSS Styling -----------------
 def load_css():
     st.markdown("""
-    <style>
+        <style>
         .stApp {
             background: linear-gradient(-45deg, #e6f2ff, #f0e6ff, #ffe6f2, #e6ffe6);
             background-size: 400% 400%;
@@ -151,10 +161,12 @@ def load_css():
             50% { transform: translateY(-5px); }
             100% { transform: translateY(0); }
         }
-    </style>
+        
+        </style>
     """, unsafe_allow_html=True)
+    
 
-
+load_css()
 
 # ----------------- Helper Functions -----------------
 def typing_indicator():
@@ -200,7 +212,7 @@ def end_interview():
         simulate_typing("assistant", f"📝 Note: {len(st.session_state.skipped_questions)} questions were skipped")
 
     simulate_typing("assistant", 
-        "🙏💙 **Thank you  for taking the time to speak with us today.**\n\n"
+        "🙏💙 **Thank you for taking the time to speak with us today.**\n\n"
         "It's been a pleasure learning more about your background and experience."
     )
 
@@ -218,13 +230,6 @@ def show_next_question():
     next_q = st.session_state.selected_questions[st.session_state.actual_question_idx]
     simulate_typing("assistant", f"**Question {st.session_state.current_question_num}:**\n\n{next_q}")
 
-# ----------------- UI Setup -----------------
-load_css()
-st.set_page_config(
-    page_title="TalentScout - Intelligent Hiring Assistant", 
-    layout="centered",
-    page_icon="💬"
-)
 
 # ----------------- Initialize State -----------------
 if "step" not in st.session_state:
@@ -272,7 +277,7 @@ if st.session_state.chat_active and user_input:
     # Check for exit keywords
     if any(word in user_input.lower() for word in exit_keywords):
         chat_output("user", user_input)
-        simulate_typing("🧑🏻‍💼assistant", "☑ That concludes our discussion. Our team will now review your responses and be in touch shortly with the next steps. We appreciate your interest in the opportunity and wish you the very best. Have a great day!")
+        simulate_typing("assistant", "☑ That concludes our discussion. Our team will now review your responses and be in touch shortly with the next steps. We appreciate your interest in the opportunity and wish you the very best. Have a great day!")
         st.session_state.chat_active = False
         st.stop()
 
@@ -285,7 +290,7 @@ if st.session_state.chat_active and user_input:
                 "question": skipped_q
             })
             chat_output("user", user_input)
-            simulate_typing("🧑🏻‍💼assistant", "╰┈➤⏭ Moving to next question...")
+            simulate_typing("assistant", "╰┈➤⏭ Moving to next question...")
             
             st.session_state.actual_question_idx += 1
             st.session_state.current_question_num += 1
@@ -298,13 +303,13 @@ if st.session_state.chat_active and user_input:
         else:
             chat_output("user", user_input)
             current_q = st.session_state.selected_questions[st.session_state.actual_question_idx]
-            simulate_typing("🧑🏻‍💼assistant", f"**Question {st.session_state.current_question_num}:**\n\n{current_q}")
+            simulate_typing("assistant", f"**Question {st.session_state.current_question_num}:**\n\n{current_q}")
             st.session_state.waiting_for_confirmation = False
 
     # Skip request logic
     elif st.session_state.step == 8 and any(word in user_input.lower() for word in skip_keywords):
         chat_output("user", user_input)
-        simulate_typing("🧑🏻‍💼 assistant", "⃠⇄ ◀ 𓊕 ▶ ↻ Are you sure you want to skip this question?")
+        simulate_typing("assistant", "⃠⇄ ◀ 𓊕 ▶ ↻ Are you sure you want to skip this question?")
         show_quick_replies(["Yes, skip", "No, continue"])
         st.session_state.waiting_for_confirmation = True
 
@@ -312,38 +317,38 @@ if st.session_state.chat_active and user_input:
     elif st.session_state.step == 1:
         st.session_state.data["name"] = user_input
         chat_output("user", user_input)
-        simulate_typing("🧑🏻‍💼assistant", "Thanks! What's your **email address**?")
+        simulate_typing("assistant", "Thanks! What's your **email address**?")
         st.session_state.step = 2
 
     elif st.session_state.step == 2:
         st.session_state.data["email"] = user_input
         chat_output("user", user_input)
-        simulate_typing("🧑🏻‍💼assistant", "Great. Please share your **phone number**.")
+        simulate_typing("assistant", "Great. Please share your **phone number**.")
         st.session_state.step = 3
 
     elif st.session_state.step == 3:
         st.session_state.data["phone"] = user_input
         chat_output("user", user_input)
-        simulate_typing("🧑🏻‍💼assistant", "How many **years of experience** do you have?")
+        simulate_typing("assistant", "How many **years of experience** do you have?")
         show_quick_replies(["0-2 years", "3-5 years", "5+ years"])
         st.session_state.step = 4
 
     elif st.session_state.step == 4:
         st.session_state.data["experience"] = user_input
         chat_output("user", user_input)
-        simulate_typing("🧑🏻‍💼assistant", "What **position(s)** are you applying for?")
+        simulate_typing("assistant", "What **position(s)** are you applying for?")
         st.session_state.step = 5
 
     elif st.session_state.step == 5:
         st.session_state.data["position"] = user_input
         chat_output("user", user_input)
-        simulate_typing("🧑🏻‍💼assistant", "Where are you **currently located**?")
+        simulate_typing("assistant", "Where are you **currently located**?")
         st.session_state.step = 6
 
     elif st.session_state.step == 6:
         st.session_state.data["location"] = user_input
         chat_output("user", user_input)
-        simulate_typing("🧑🏻‍💼assistant", "What is your **tech stack**? (e.g., Python, React, MySQL)")
+        simulate_typing("assistant", "What is your **tech stack**? (e.g., Python, React, MySQL)")
         st.session_state.step = 7
 
     elif st.session_state.step == 7:
@@ -387,7 +392,8 @@ if st.session_state.chat_active and user_input:
             end_interview()
             
     elif st.session_state.step == 9:
-        st.success("✰ ✰ ✰ Interview completed. Thank you!")  
+        st.success("✰ ✰ ✰ Interview completed. Thank you!") 
     
         
   
+
