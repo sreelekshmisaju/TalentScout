@@ -1,4 +1,3 @@
-# utils.py
 
 import os
 import re
@@ -52,3 +51,4 @@ def is_unexpected_input(user_input):
     if re.fullmatch(r"[^a-zA-Z0-9\s]+", user_input.strip()):
         return True  # Input is only symbols
     return False
+
